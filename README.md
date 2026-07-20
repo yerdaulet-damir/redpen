@@ -4,7 +4,7 @@
 
 ### AI copywriting that doesn't sound like AI.
 
-**Redpen turns your coding agent into a copywriter with taste.** Every line it writes has to pass three questions before it ships — so your headlines, landing pages, and taglines stop reading like generic AI filler and start reading like something a person would remember.
+**Redpen holds every line your agent writes to three questions before it ships — can you picture it, can you prove it, could nobody else say it.** Fail one and the line gets cut. So your headlines, landing pages, and taglines stop reading like filler and start reading like something a person would remember.
 
 Works in Claude Code, Cursor, Cline, Windsurf, Copilot, and any agent that reads a rules file.
 

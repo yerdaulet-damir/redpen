@@ -86,9 +86,19 @@ On its own it defaults to the statistical average, which is slop. With a rule th
 **What's the difference between concrete and abstract copy?**
 Abstract copy ("a better way," "empower creators") can't be dropped on your foot — you can't see it, so you won't remember it. Concrete copy ("1,000 songs in your pocket") is a thing you can picture. Concrete wins every time.
 
-## Credit
+**What are Harry Dry's three questions?**
+Can I visualize it? Can I falsify it? Can nobody else say it? Harry Dry — of Marketing Examples — asks these of every sentence he writes. Three no's and you're writing rubbish; three yes's and you're onto something. Redpen runs all three on every line automatically.
 
-Redpen encodes the copywriting method taught by **[Harry Dry](https://marketingexamples.com)** of Marketing Examples — the three questions, concrete over abstract, point don't talk, and writing copy that can't be copied. If you want the human version of everything this tool automates, read his work; it's the best on the internet.
+**What is the Harry Dry copywriting method?**
+Make it visual (something you can picture), make it falsifiable (provably true or false, not an adjective), and make it so specific no competitor could sign it. Then point, don't talk — show a fact instead of describing a feeling. He breaks it down in full in his [76-minute copywriting talk](https://www.youtube.com/watch?v=TUMjnmfsPeM) on the *How I Write* podcast. Redpen turns that method into a rule your AI agent follows on every line.
+
+## The method behind Redpen
+
+Redpen is the copywriting method of **Harry Dry** — creator of [Marketing Examples](https://marketingexamples.com), who has taught 100,000+ people to write copy that rips — turned into a rule your agent can't ignore.
+
+The three questions come straight from his framework, laid out in his **[76-minute copywriting breakdown](https://www.youtube.com/watch?v=TUMjnmfsPeM)** on David Perell's *How I Write* podcast. If a line can't be visualized, can't be falsified, and could be signed by a competitor, it gets cut. Harry teaches it with the ads everyone remembers — New Balance's "supermodels in London and dads in Ohio," The Economist, Volkswagen, Hinge's "designed to be deleted," Couch to 5K — plus Kaplan's Law of Words: *any word that isn't working for you is working against you.*
+
+Redpen doesn't replace him — it enforces his rules on every line, so you get the discipline without having to hold it in your head. If you want the human version, [watch the talk](https://www.youtube.com/watch?v=TUMjnmfsPeM) and read [Marketing Examples](https://marketingexamples.com); it's the best copywriting on the internet.
 
 ## License
 

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yerdaulet-damir.github.io/redpen/sitemap.xml

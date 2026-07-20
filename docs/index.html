@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>document.documentElement.className='js'</script>
+<title>Redpen — AI copywriting that doesn't sound like AI</title>
+<meta name="description" content="Redpen turns your coding agent into a copywriter with taste. Every line passes three questions — can I visualize it, can I falsify it, can nobody else say it — before it ships. Harry Dry's method as a Claude Code, Cursor & Copilot skill." />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content="Yerdaulet Damir" />
+<link rel="canonical" href="https://yerdaulet-damir.github.io/redpen/" />
+<meta name="theme-color" content="#F4F4F0" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Redpen" />
+<meta property="og:title" content="Redpen — AI copywriting that doesn't sound like AI" />
+<meta property="og:description" content="Every line passes three questions before it ships. Harry Dry's method as a Claude Code / Cursor skill." />
+<meta property="og:url" content="https://yerdaulet-damir.github.io/redpen/" />
+<meta property="og:image" content="https://yerdaulet-damir.github.io/redpen/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Redpen — AI copywriting that doesn't sound like AI" />
+<meta name="twitter:description" content="Kill the copy slop. Three questions, every line. Harry Dry's method as an agent skill." />
+<meta name="twitter:creator" content="@aimyerdaulet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Redpen","applicationCategory":"DeveloperApplication","operatingSystem":"Claude Code, Cursor, Cline, Copilot","description":"An anti-slop copywriting skill for AI coding agents. Every line passes three questions — can I visualize it, can I falsify it, can nobody else say it — based on the copywriting method of Harry Dry.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Yerdaulet Damir","url":"https://yerdaulet.xyz"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are Harry Dry's three questions?","acceptedAnswer":{"@type":"Answer","text":"Can I visualize it? Can I falsify it? Can nobody else say it? Harry Dry of Marketing Examples asks these of every sentence. Three no's and you're writing rubbish; three yes's and you're onto something."}},{"@type":"Question","name":"How do I stop my AI copy from sounding generic?","acceptedAnswer":{"@type":"Answer","text":"Generic AI copy is abstract, unfalsifiable, and interchangeable. Redpen forces every line to be concrete, falsifiable, and ownable — the three constraints that separate memorable copy from filler."}},{"@type":"Question","name":"What is the Harry Dry copywriting method?","acceptedAnswer":{"@type":"Answer","text":"Make it visual, make it falsifiable, and make it so specific no competitor could sign it. Then point, don't talk. Redpen turns that method into a rule your AI agent follows on every line."}}]}
+</script>
+
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --paper:#F4F4F0; --ink:#0A0A0A; --red:#E5241D; --dim:#6f6f68;
+    --disp:'Archivo Black',sans-serif; --body:'Archivo',system-ui,sans-serif; --mono:'JetBrains Mono',monospace;
+  }
+  html{background:var(--paper)}
+  body{background:var(--paper);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body.loading{overflow:hidden;height:100vh}
+  ::selection{background:var(--red);color:var(--paper)}
+  a{color:inherit;text-decoration:none}
+  .mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em}
+
+  /* grain */
+  .grain{position:fixed;inset:0;z-index:200;pointer-events:none;opacity:.045;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  /* preloader */
+  #pre{position:fixed;inset:0;z-index:300;background:var(--ink);color:var(--paper);
+    display:flex;align-items:flex-end;justify-content:space-between;padding:32px}
+  #pre .l{font-family:var(--mono);font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+  #pre .c{font-family:var(--disp);font-size:clamp(80px,22vw,280px);line-height:.8}
+  #pre .c b{color:var(--red);font-weight:400}
+
+  .frame{max-width:1400px;margin:0 auto;border-left:1.5px solid var(--ink);border-right:1.5px solid var(--ink);min-height:100vh}
+
+  /* nav */
+  nav{display:grid;grid-template-columns:1fr auto auto;border-bottom:1.5px solid var(--ink);font-family:var(--mono);
+    text-transform:uppercase;letter-spacing:.1em;font-size:12px;position:sticky;top:0;background:var(--paper);z-index:100}
+  nav>*{padding:14px 20px}
+  nav .brand{font-weight:700;letter-spacing:.02em}
+  nav .brand b{color:var(--red)}
+  nav .mid{border-left:1.5px solid var(--ink);border-right:1.5px solid var(--ink);color:var(--dim)}
+  nav .cta{background:var(--ink);color:var(--paper)}
+  nav .cta:hover{background:var(--red)}
+
+  /* hero */
+  .hero{padding:40px 20px 60px;border-bottom:1.5px solid var(--ink);position:relative}
+  .kick{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:44px}
+  .kick .red{color:var(--red)}
+  .slopline{font-family:var(--disp);font-size:clamp(15px,2.6vw,30px);text-transform:uppercase;color:var(--dim);
+    letter-spacing:-.01em;position:relative;display:inline-block;margin-bottom:18px;line-height:1}
+  .slopline .bar{position:absolute;left:-4px;right:-4px;top:52%;height:5px;background:var(--red);
+    transform:scaleX(0);transform-origin:left}
+  h1{font-family:var(--disp);font-size:clamp(3.4rem,13.5vw,13rem);line-height:.82;letter-spacing:-.045em;
+    text-transform:uppercase}
+  h1 .r{color:var(--red)}
+  .hero .sub{margin-top:34px;max-width:46ch;font-size:clamp(16px,2vw,20px);line-height:1.4;font-weight:500}
+  .hero .btns{margin-top:34px;display:flex;gap:0;flex-wrap:wrap;border:1.5px solid var(--ink);width:fit-content}
+  .hero .btns a{font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.08em;padding:15px 26px}
+  .hero .btns a.p{background:var(--ink);color:var(--paper)}
+  .hero .btns a.p:hover{background:var(--red)}
+  .hero .btns a.s{border-left:1.5px solid var(--ink)}
+  .hero .btns a.s:hover{color:var(--red)}
+  .hero .idx{position:absolute;right:20px;bottom:40px;font-family:var(--mono);font-size:12px;color:var(--dim);text-align:right;line-height:1.6}
+
+  /* section label bar */
+  .bar-label{display:grid;grid-template-columns:auto 1fr auto;border-bottom:1.5px solid var(--ink);
+    font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+  .bar-label>*{padding:12px 20px}
+  .bar-label .n{color:var(--red);font-weight:700}
+  .bar-label .t{border-left:1.5px solid var(--ink);border-right:1.5px solid var(--ink)}
+  .bar-label .m{color:var(--dim)}
+
+  /* the board grid (1px dividers via gap) */
+  .board{display:grid;gap:1.5px;background:var(--ink);border-bottom:1.5px solid var(--ink)}
+  .board.three{grid-template-columns:repeat(3,1fr)}
+  .board.two{grid-template-columns:repeat(2,1fr)}
+  .cell{background:var(--paper);padding:32px 24px;min-height:260px;display:flex;flex-direction:column}
+  .cell .num{font-family:var(--disp);font-size:clamp(3rem,7vw,6.5rem);line-height:.8;letter-spacing:-.03em}
+  .cell .num b{color:var(--red);font-weight:400}
+  .cell .q{font-family:var(--disp);font-size:clamp(20px,2.4vw,30px);text-transform:uppercase;line-height:.95;
+    letter-spacing:-.02em;margin-top:22px}
+  .cell .d{font-family:var(--body);font-size:15px;line-height:1.45;color:#333;margin-top:14px;font-weight:500}
+  .cell .tag{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);margin-top:auto;padding-top:20px}
+
+  /* before/after rows */
+  .ba{border-bottom:1.5px solid var(--ink)}
+  .ba .row{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:var(--ink)}
+  .ba .row>div{background:var(--paper);padding:22px 24px;display:flex;align-items:center;min-height:96px}
+  .ba .slop{color:var(--dim);font-size:clamp(15px,1.8vw,19px);position:relative;font-weight:600}
+  .ba .slop .bar{position:absolute;left:20px;right:20px;top:52%;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left}
+  .ba .good{font-family:var(--disp);font-size:clamp(16px,2vw,24px);text-transform:uppercase;letter-spacing:-.02em;line-height:.98}
+
+  /* install board */
+  .cmd{background:var(--ink);color:var(--paper);padding:30px 24px;min-height:200px;display:flex;flex-direction:column}
+  .cmd.paper{background:var(--paper);color:var(--ink)}
+  .cmd .agent{font-family:var(--disp);font-size:clamp(22px,2.6vw,32px);text-transform:uppercase;letter-spacing:-.02em}
+  .cmd .code{font-family:var(--mono);font-size:12.5px;margin-top:auto;padding-top:24px;line-height:1.7;word-break:break-all;color:#bdbdb6}
+  .cmd.paper .code{color:#444}
+  .cmd .code .k{color:var(--red)}
+
+  /* method */
+  .method{padding:48px 24px;border-bottom:1.5px solid var(--ink)}
+  .method h2{font-family:var(--disp);font-size:clamp(2rem,5vw,4.5rem);text-transform:uppercase;line-height:.86;letter-spacing:-.04em;max-width:16ch}
+  .method h2 .r{color:var(--red)}
+  .method p{margin-top:24px;max-width:60ch;font-size:16px;line-height:1.5;font-weight:500}
+  .method a{border-bottom:2px solid var(--red)}
+  .method .ex{margin-top:26px;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);display:flex;flex-wrap:wrap;gap:8px 20px}
+
+  /* footer wordmark */
+  footer{padding:0}
+  .wordmark{font-family:var(--disp);font-size:clamp(4rem,23vw,23rem);line-height:.72;letter-spacing:-.05em;
+    text-transform:uppercase;padding:30px 16px 10px;overflow:hidden}
+  .wordmark .r{color:var(--red)}
+  .footmeta{display:grid;grid-template-columns:1fr auto auto;border-top:1.5px solid var(--ink);
+    font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--dim)}
+  .footmeta>*{padding:14px 20px}
+  .footmeta a:hover{color:var(--red)}
+
+  .reveal{opacity:1}
+  .js .reveal{opacity:0;transform:translateY(24px)}
+  @media (prefers-reduced-motion:reduce){.js .reveal{opacity:1!important;transform:none!important} .bar{transform:scaleX(1)!important}}
+  @media(max-width:760px){
+    .board.three,.board.two{grid-template-columns:1fr}
+    .ba .row{grid-template-columns:1fr}
+    nav{grid-template-columns:1fr auto}
+    nav .mid{display:none}
+    .hero .idx{display:none}
+  }
+</style>
+</head>
+<body class="loading">
+<div class="grain"></div>
+
+<div id="pre">
+  <span class="l">REDPEN® / LOADING</span>
+  <span class="c">RED<b>·</b></span>
+</div>
+
+<div class="frame">
+
+  <nav>
+    <span class="brand">REDPEN<b>®</b></span>
+    <span class="mid">[ COPYWRITING SKILL ]</span>
+    <a class="cta" href="https://github.com/yerdaulet-damir/redpen">↗ INSTALL</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="idx">FIG.01<br>REV 1.0<br>MIT</div>
+    <div class="kick reveal">
+      <span>[ CLAUDE CODE · CURSOR · CLINE · COPILOT ]</span>
+      <span class="red">/// ANTI-SLOP</span>
+    </div>
+    <div class="slopline reveal">"A POWERFUL, SEAMLESS AI COPY PLATFORM"<span class="bar" data-strike></span></div>
+    <h1 class="reveal">COPY THAT<br>CAN'T BE<br><span class="r">COPIED.</span></h1>
+    <p class="sub reveal">Redpen turns your coding agent into a copywriter with taste. Every line passes three questions before it ships — so your headlines stop reading like generic AI filler.</p>
+    <div class="btns reveal">
+      <a class="p" href="https://github.com/yerdaulet-damir/redpen">↗ GET REDPEN</a>
+      <a class="s" href="#method">THE METHOD</a>
+    </div>
+  </header>
+
+  <!-- THREE QUESTIONS -->
+  <div class="bar-label reveal"><span class="n">01</span><span class="t">THE THREE QUESTIONS</span><span class="m">EVERY LINE / OR IT'S CUT</span></div>
+  <section class="board three">
+    <div class="cell reveal">
+      <div class="num">0<b>1</b></div>
+      <div class="q">Can I<br>visualize it?</div>
+      <div class="d">If you can't drop it on your foot, it's abstract. "Change an industry" → nothing. "Dads in Ohio" → you see it.</div>
+      <div class="tag">CONCRETE / NOT ABSTRACT</div>
+    </div>
+    <div class="cell reveal">
+      <div class="num">0<b>2</b></div>
+      <div class="q">Can I<br>falsify it?</div>
+      <div class="d">Provably true or false makes ears prick up. "Great values" is air. "He reads on the tube" is a claim.</div>
+      <div class="tag">FACTS / NOT ADJECTIVES</div>
+    </div>
+    <div class="cell reveal">
+      <div class="num">0<b>3</b></div>
+      <div class="q">Can nobody<br>else say it?</div>
+      <div class="d">If a competitor could sign the exact line, cut it. "Your car has five numbers. Volvo has six."</div>
+      <div class="tag">OWNABLE / NOT GENERIC</div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER -->
+  <div class="bar-label reveal"><span class="n">02</span><span class="t">BEFORE → AFTER</span><span class="m">SAME PRODUCT / RED PEN</span></div>
+  <section class="ba">
+    <div class="row reveal"><div class="slop">A powerful, seamless AI platform that empowers creators.<span class="bar" data-strike></span></div><div class="good">1,000 songs in your pocket.</div></div>
+    <div class="row reveal"><div class="slop">The best all-in-one wellness supplement.<span class="bar" data-strike></span></div><div class="good">You're going to need a smaller cabinet.</div></div>
+    <div class="row reveal"><div class="slop">A dating app for meaningful connections.<span class="bar" data-strike></span></div><div class="good">The dating app designed to be deleted.</div></div>
+    <div class="row reveal"><div class="slop">Learn copywriting and grow your business fast.<span class="bar" data-strike></span></div><div class="good">Spend 2 hours on the skill you'll use for 22,000.</div></div>
+  </section>
+
+  <!-- INSTALL -->
+  <div class="bar-label reveal"><span class="n">03</span><span class="t">INSTALL</span><span class="m">ONE FILE / EVERY AGENT</span></div>
+  <section class="board three">
+    <div class="cmd reveal"><div class="agent">Claude<br>Code</div><div class="code"><span class="k">cp</span> skills/redpen/<br>SKILL.md .claude/<br>skills/ → <span class="k">/redpen</span></div></div>
+    <div class="cmd paper reveal"><div class="agent">Cursor</div><div class="code"><span class="k">cp</span> .cursor/rules/<br>redpen.mdc → your<br>project /.cursor/rules</div></div>
+    <div class="cmd reveal"><div class="agent">Cline /<br>Copilot</div><div class="code"><span class="k">cp</span> .clinerules/<br>redpen.md · or point<br>any agent at AGENTS.md</div></div>
+  </section>
+
+  <!-- METHOD -->
+  <section class="method" id="method">
+    <div class="bar-label reveal" style="border-top:1.5px solid var(--ink);margin:-48px -24px 40px;border-bottom:1.5px solid var(--ink)"><span class="n">04</span><span class="t">THE METHOD</span><span class="m">HARRY DRY / MARKETING EXAMPLES</span></div>
+    <h2 class="reveal">Harry Dry's<br>method, as a rule<br>your agent <span class="r">can't ignore.</span></h2>
+    <p class="reveal">The three questions come straight from <b>Harry Dry</b> of <a href="https://marketingexamples.com">Marketing Examples</a>, who has taught 100,000+ people to write copy that rips. He lays the whole framework out in his <a href="https://www.youtube.com/watch?v=TUMjnmfsPeM">76-minute copywriting breakdown</a> on David Perell's <i>How I Write</i> podcast. Redpen doesn't replace him — it enforces his rules on every line, so you get the discipline without holding it in your head.</p>
+    <div class="ex reveal"><span>+ NEW BALANCE</span><span>+ THE ECONOMIST</span><span>+ VOLKSWAGEN</span><span>+ HINGE</span><span>+ COUCH TO 5K</span><span>+ KAPLAN'S LAW OF WORDS</span></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wordmark reveal">RED<span class="r">PEN</span>®</div>
+    <div class="footmeta">
+      <span>© 2026 · MIT · CURATED BY YERDAULET DAMIR</span>
+      <a href="https://github.com/yerdaulet-damir/redpen">GITHUB ↗</a>
+      <a href="https://yerdaulet.xyz">YERDAULET.XYZ ↗</a>
+    </div>
+  </footer>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if(!window.gsap){
+    document.documentElement.classList.remove('js');
+    var p0=document.getElementById('pre'); if(p0)p0.style.display='none';
+    document.body.classList.remove('loading'); return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+
+  if(window.Lenis && !reduce){
+    var lenis=new Lenis({lerp:.085});
+    function raf(t){lenis.raf(t);requestAnimationFrame(raf)} requestAnimationFrame(raf);
+    lenis.on('scroll',ScrollTrigger.update);
+  }
+
+  function start(){
+    // reveals
+    gsap.utils.toArray('.reveal').forEach(function(el){
+      gsap.to(el,{opacity:1,y:0,duration:.7,ease:'power3.out',
+        scrollTrigger:{trigger:el,start:'top 90%'}});
+    });
+    // hero slop strike-through — the product demonstrating itself
+    var heroBar=document.querySelector('.slopline .bar');
+    if(heroBar) gsap.to(heroBar,{scaleX:1,duration:.5,ease:'power4.inOut',delay:.9});
+    // before/after strikes on scroll
+    gsap.utils.toArray('.ba .slop .bar').forEach(function(bar){
+      gsap.to(bar,{scaleX:1,duration:.45,ease:'power4.inOut',
+        scrollTrigger:{trigger:bar,start:'top 82%'}});
+    });
+    ScrollTrigger.refresh();
+  }
+
+  var pre=document.getElementById('pre');
+  if(reduce){ document.body.classList.remove('loading'); pre.style.display='none'; start(); return; }
+  var seen=false; try{seen=sessionStorage.getItem('rp_seen')}catch(e){}
+  if(seen){ document.body.classList.remove('loading'); pre.style.display='none'; start(); return; }
+  try{sessionStorage.setItem('rp_seen','1')}catch(e){}
+
+  var t0=Date.now();
+  function done(){
+    document.body.classList.remove('loading');
+    gsap.to(pre,{yPercent:-100,duration:.8,ease:'power4.inOut',onComplete:function(){pre.style.display='none'}});
+    start();
+  }
+  addEventListener('load',function(){ setTimeout(done, Math.max(0,1300-(Date.now()-t0))); });
+  setTimeout(function(){ if(document.body.classList.contains('loading')) done(); },3800);
+})();
+</script>
+</body>
+</html>

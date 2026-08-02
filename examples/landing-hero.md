@@ -1,4 +1,4 @@
-# How to write a landing page hero that converts
+# How to write a landing page hero that earns the next line
 
 The hero is the one line a visitor reads before deciding to stay or leave. It has about two seconds. Adjectives waste them.
 

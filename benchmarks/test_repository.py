@@ -26,6 +26,15 @@ class RepositoryIntegrityTest(unittest.TestCase):
             self.assertTrue(required <= case.keys())
             self.assertTrue(case["truth"])
 
+    def test_published_benchmark_supports_public_claim(self):
+        path = ROOT / "benchmarks/runs/claude-sonnet-4-6-2026-08-02.json"
+        run = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(run["model"], "claude-sonnet-4-6")
+        self.assertEqual(len(run["results"]), 6)
+        self.assertTrue(all(result["winner"] == "redpen" for result in run["results"]))
+        for key in ("skill_sha256", "harness_sha256", "cases_sha256"):
+            self.assertRegex(run[key], r"^[0-9a-f]{64}$")
+
     def test_structured_data_is_valid_and_visible(self):
         html = (ROOT / "docs/index.html").read_text(encoding="utf-8")
         blocks = re.findall(

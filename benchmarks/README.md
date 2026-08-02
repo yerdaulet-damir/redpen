@@ -39,3 +39,7 @@ The verification run on 2026-08-02 with Claude Sonnet 4.6 produced six Redpen
 wins in six stable mirrored cases. Treat that as a directional regression
 baseline, not a permanent product score: model judges are noisy, which is why
 future disagreement remains visible instead of becoming a win.
+
+Published run: [`runs/claude-sonnet-4-6-2026-08-02.json`](runs/claude-sonnet-4-6-2026-08-02.json).
+It includes the generated candidates, raw forward and reversed judgments, and
+the hashes needed to identify the exact skill, harness, and cases used.

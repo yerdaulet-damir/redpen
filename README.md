@@ -9,7 +9,7 @@
 <p align="center"><strong>AI copywriting with taste for Claude Code, Codex, Cursor, Cline, Windsurf, and Copilot.</strong></p>
 
 <p align="center">
-  Write landing pages, headlines, emails, launch posts, product copy, and scripts that sound specific, human, and impossible for a competitor to copy.
+  Write landing pages, headlines, emails, launch posts, product copy, and scripts rooted in product facts competitors cannot honestly claim.
 </p>
 
 <p align="center">
@@ -102,9 +102,21 @@ importantly, each one meets a reader in a recognizable moment.
 
 ## Install
 
-Redpen is one ruleset with adapters for every major agent. Pick yours.
+Redpen is one ruleset with adapters for several popular agents. Pick yours.
 
-**Claude Code** — copy [`skills/redpen/SKILL.md`](skills/redpen/SKILL.md) into `.claude/skills/redpen/SKILL.md`, then invoke with `/redpen` or just write copy while it's active.
+**Claude Code** — copy the complete [`skills/redpen/`](skills/redpen/) directory into `.claude/skills/redpen/`, then invoke with `/redpen` or just write copy while it is active.
+
+```bash
+mkdir -p .claude/skills/redpen
+cp -R skills/redpen/. .claude/skills/redpen/
+```
+
+**Codex** — install the same skill directory globally, or bring [`AGENTS.md`](AGENTS.md) into the project you want Redpen to govern.
+
+```bash
+mkdir -p ~/.codex/skills/redpen
+cp -R skills/redpen/. ~/.codex/skills/redpen/
+```
 
 **Cursor** — copy [`.cursor/rules/redpen.mdc`](.cursor/rules/redpen.mdc) into your project's `.cursor/rules/`.
 
@@ -213,9 +225,10 @@ disqualified before the mirrored verdict is counted. Every run records the
 model, UTC timestamp, commit, skill hash, and raw judgments so a result can be
 audited instead of repeated as a marketing claim.
 
-The 2026-08-02 Claude Sonnet 4.6 verification run produced **six Redpen wins in
-six stable mirrored cases**. That is a regression baseline, not a claim that
-one model grading itself has measured human conversion.
+The [2026-08-02 Claude Sonnet 4.6 verification run](benchmarks/runs/claude-sonnet-4-6-2026-08-02.json)
+produced **six Redpen wins in six stable mirrored cases**. That is a regression
+baseline, not a claim that one model grading itself has measured human
+conversion.
 
 ## License
 

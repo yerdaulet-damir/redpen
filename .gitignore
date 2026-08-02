@@ -1,6 +1,9 @@
 .DS_Store
+.claude/
 benchmarks/results.json
 node_modules/
 *.log
 .env
+.env.*
 __pycache__/
+*.py[cod]

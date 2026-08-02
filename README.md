@@ -1,22 +1,58 @@
-<div align="center">
+<p align="center">
+  <a href="https://yerdaulet-damir.github.io/redpen/">
+    <img src="assets/redpen-cover.svg" alt="Redpen — make your AI find something worth saying" width="100%">
+  </a>
+</p>
 
-# ✍️ Redpen
+<h1 align="center">Redpen</h1>
 
-### Give your AI an editor, not another prompt template.
+<p align="center"><strong>AI copywriting with taste for Claude Code, Codex, Cursor, Cline, Windsurf, and Copilot.</strong></p>
 
-**Redpen gathers product truth, enters the reader's real moment, develops three different creative territories, and compares them blind before it ships a line.** Harry Dry's three questions still finish the work. They are no longer asked to do the whole job.
+<p align="center">
+  Write landing pages, headlines, emails, launch posts, product copy, and scripts that sound specific, human, and impossible for a competitor to copy.
+</p>
 
-Works in Claude Code, Cursor, Cline, Windsurf, Copilot, and any agent that reads a rules file.
-
-</div>
+<p align="center">
+  <a href="#install"><strong>Install</strong></a> ·
+  <a href="skills/redpen/SKILL.md"><strong>Read the skill</strong></a> ·
+  <a href="examples/"><strong>See examples</strong></a> ·
+  <a href="benchmarks/"><strong>Inspect the benchmark</strong></a> ·
+  <a href="CONTRIBUTING.md"><strong>Contribute taste</strong></a>
+</p>
 
 ---
 
-You know the copy. "A powerful, seamless, all-in-one platform that empowers creators to unlock their potential." It's grammatical. It's confident. And it says **nothing** — you can't picture it, you can't prove it, and any competitor could sign the exact same line.
+Most AI copy tools begin by drafting. Redpen begins by finding **what is true, who needs to hear it, and what that person is living through right now**. Only then does it write.
 
-That's slop. Not because it's wrong, but because it's forgettable.
+Give it a rough brief or an existing page. Redpen builds a truth ledger, enters one reader's real moment, develops three genuinely different creative directions, compares them blind, and rewrites the winner until the copy feels discovered rather than generated.
 
-Redpen is the old ad man with the red pen, living inside your agent. You hand him a paragraph; he asks what happened in the reader's day, what is actually true about the product, and which phrase is carrying the line. Then he crosses out everything else.
+## From a claim anyone could make to a moment one reader knows
+
+> **Before:** Never worry about unpaid invoices again.
+>
+> **After:** **The invoice tab you reopen every Friday can follow up without you.**
+>
+> Approve the reminder once. It sends on your schedule when an invoice turns overdue.
+
+The rewrite does not sprinkle personality onto the same claim. It uses a supplied product truth and a repeated moment from the reader's week. The first line creates recognition; the second earns belief.
+
+Redpen can write from zero, rewrite a weak draft, compare alternatives, or edit a long page. It is not an AI detector, a synonym spinner, or another list of banned phrases.
+
+## Help build the voice AI does not find by averaging
+
+Redpen is open source because taste should not collapse into one person's list
+of favorite lines. Copywriters, founders, designers, researchers, and people
+with a sharp ear are invited to contribute real briefs, reader moments,
+before/after edits, benchmark cases, and methods that make an agent find a
+point of view instead of predicting the safest next phrase.
+
+A useful contribution gives the agent better evidence, a more exact reader, a
+real tension, or a harder editorial choice. It does not add another headline
+formula, a longer banned-word list, fake vulnerability, or instructions to
+sprinkle slang over generic copy.
+
+Start with the [contribution guide](CONTRIBUTING.md). Bring work a human editor
+would stop at, argue over, and remember.
 
 ## The three questions are gates, not the engine
 
@@ -58,8 +94,8 @@ reader moment rather than replacing adjectives with better adjectives.
 |---|---|
 | "Seamless alerts that keep developers informed anywhere." | **"Like `console.log`, but it arrives on your phone."** |
 | "The easiest way to record and share your screen." | **"Record the bug before the meeting starts. No desktop app."** |
-| "AI code review tailored to your team." | **"It reads your last 200 merged PRs before it reviews the next one."** |
-| "Never worry about unpaid invoices again." | **"The invoice tab you reopen every Friday can follow up without you."** |
+| "AI-powered reminders that eliminate payment stress." | **"The invoice tab you reopen every Friday can follow up without you."** |
+| "A powerful productivity app that helps you get more done." | **"Every task you'll do today, on one screen, sorted by what's overdue."** |
 
 Each line on the right starts from something visible or verifiable. More
 importantly, each one meets a reader in a recognizable moment.

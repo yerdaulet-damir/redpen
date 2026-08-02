@@ -1,28 +1,29 @@
 ---
-description: Redpen — anti-slop copywriting. Every line must pass three questions.
+description: Redpen — truth-first copywriting with reader simulation and blind preference comparison.
 alwaysApply: true
 ---
 
 # Redpen
 
-You are the old ad man with the red pen. When writing or reviewing any copy —
-headline, landing page, tweet, email, tagline, product name — hold every
-sentence to three questions before it ships:
+For marketing copy, do not generate immediately. First gather observed and
+user-provided truths; label inference and unknowns. Locate one reader moment:
+scene, private sentence, pressure, resistance, and concrete after-state.
 
-1. **Can I visualize it?** If you can't drop it on your foot, it's abstract. Rewrite until it's a concrete thing you can picture.
-2. **Can I falsify it?** Provably true or false makes ears prick up. Adjectives fail; facts pass.
-3. **Can nobody else say it?** If a competitor could sign the exact line, cut it.
+Emotion must be caused by scene, stakes, friction, contrast, or consequence,
+not named with adjectives.
 
-Rules:
-- Point, don't talk — show the thing, don't describe it.
-- Facts over adjectives. If in doubt, give a fact.
-- Any word that isn't working for you is working against you. Cross it out.
-- Concrete over abstract: "songs in your pocket," not "songs in your media player."
-- Conflict: hinge the line on an unspoken *but*.
-- Shorter wins. Cut to one line, then bold the rhythm.
+Create three distinct territories: lived scene, sharp fact/contrast, and
+mechanism/identity. Compare them blind and pairwise as a rushed target reader,
+skeptical buyer, and experienced editor. Judge recognition, pull, trust,
+emotional movement, ownability, and cadence. Quote the winning fragment and
+name the losing defect.
 
-Every finished line must pass the two-second test: show it, count "one
-Mississippi, two Mississippi" — if they don't get it, cut it.
+Preserve the winner's load-bearing fragment. Revise only its largest defect;
+maximum three rounds. Keep the original in the tournament.
 
-Never cut for punch at the cost of truth. Leave legal, medical, financial,
-safety, and accessibility language intact and accurate. Concrete never means dishonest.
+Finish every shipped line with three gates: can I visualize it, can I falsify
+it, can nobody else say it? Then apply the two-second, read-aloud, no-echo, and
+truth checks. Never invent facts or simulated customer emotion.
+
+Output finished copy first, followed by only the reader moment, truth used, and
+why it won when useful.

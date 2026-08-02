@@ -1,0 +1,7 @@
+interface:
+  display_name: "Redpen"
+  short_description: "Human editorial taste for copy that earns attention"
+  brand_color: "#C92A2A"
+  default_prompt: "Use $redpen to rewrite this copy through a truth-first reader and preference loop."
+policy:
+  allow_implicit_invocation: true

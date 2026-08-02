@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Redpen — make your AI find something worth saying</title>
+  <desc id="desc">Editorial red, black, and ivory cover for the Redpen AI copywriting skill.</desc>
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#0A0A0A" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <rect x="20" y="20" width="1160" height="590" fill="#F4F4F0"/>
+  <rect x="20" y="20" width="1160" height="590" fill="url(#grid)"/>
+
+  <g font-family="'Courier New', monospace" font-weight="700" letter-spacing="2">
+    <text x="60" y="72" font-size="17" fill="#0A0A0A">REDPEN</text>
+    <text x="1140" y="72" text-anchor="end" font-size="15" fill="#E5241D">AI COPYWRITING SKILL</text>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <text x="60" y="168" font-size="28" fill="#74746F">“POWERFUL. SEAMLESS. ALL-IN-ONE.”</text>
+    <path d="M55 157 C250 151 451 164 689 155" fill="none" stroke="#E5241D" stroke-width="10" stroke-linecap="square"/>
+    <text x="55" y="274" font-size="82" letter-spacing="-4" fill="#0A0A0A">MAKE YOUR AI FIND</text>
+    <text x="55" y="365" font-size="82" letter-spacing="-4" fill="#0A0A0A">SOMETHING WORTH</text>
+    <text x="55" y="456" font-size="104" letter-spacing="-6" fill="#E5241D">SAYING.</text>
+  </g>
+
+  <g transform="translate(1010 330) rotate(-9)">
+    <path d="M0 0L36 142L54 107L88 128Z" fill="#0A0A0A"/>
+    <path d="M36 142L54 107L44 101Z" fill="#E5241D"/>
+    <path d="M-9 154C23 142 60 145 102 161" fill="none" stroke="#E5241D" stroke-width="9" stroke-linecap="square"/>
+  </g>
+
+  <line x1="55" y1="510" x2="1145" y2="510" stroke="#0A0A0A" stroke-width="2"/>
+  <g font-family="'Courier New', monospace" font-weight="700" font-size="15" letter-spacing="1.3">
+    <text x="60" y="553" fill="#0A0A0A">TRUTH → READER → 3 DIRECTIONS → BLIND EDIT → SHIP</text>
+    <text x="1140" y="553" text-anchor="end" fill="#0A0A0A">CLAUDE CODE · CODEX · CURSOR</text>
+    <text x="60" y="583" fill="#74746F">COPY ONLY YOUR PRODUCT COULD SAY.</text>
+    <text x="1140" y="583" text-anchor="end" fill="#E5241D">OPEN SOURCE / MIT</text>
+  </g>
+</svg>

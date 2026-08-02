@@ -13,6 +13,7 @@ when the mirrored verdicts agree and no hard gate fails.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -21,6 +22,7 @@ import subprocess
 import tempfile
 import time
 import urllib.request
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -147,13 +149,50 @@ def parse_json(text: str) -> dict:
     return json.loads(match.group(0))
 
 
+def eligible_vote(report: dict, labels: dict[str, str]) -> str:
+    """Return the eligible winner after hard failures disqualify candidates."""
+    failed = {
+        labels[key.upper()]
+        for key in ("a", "b")
+        if report.get(key, {}).get("hard_failures")
+    }
+    eligible = {"baseline", "redpen"} - failed
+    if not eligible:
+        return "invalid"
+    if len(eligible) == 1:
+        return eligible.pop()
+    return labels.get(report.get("winner"), "invalid")
+
+
 def mirrored_winner(first: dict, second: dict) -> str:
-    """Return redpen, baseline, tie, or unstable after swapping candidate order."""
-    first_vote = {"A": "baseline", "B": "redpen", "tie": "tie"}.get(first["winner"])
-    second_vote = {"A": "redpen", "B": "baseline", "tie": "tie"}.get(second["winner"])
+    """Return an eligible verdict after swapping candidate order."""
+    first_vote = eligible_vote(first, {"A": "baseline", "B": "redpen", "tie": "tie"})
+    second_vote = eligible_vote(second, {"A": "redpen", "B": "baseline", "tie": "tie"})
     if first_vote == second_vote:
         return first_vote
     return "unstable"
+
+
+def run_metadata(skill: str) -> dict:
+    try:
+        commit = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+    except (OSError, subprocess.CalledProcessError):
+        commit = "unknown"
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "commit": commit,
+        "skill_sha256": hashlib.sha256(skill.encode()).hexdigest(),
+        "harness_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        "cases_sha256": hashlib.sha256(CASES.read_bytes()).hexdigest(),
+        "model": MODEL,
+        "provider": PROVIDER,
+    }
 
 
 def judge(case: dict, baseline: str, redpen: str) -> tuple[dict, dict, str]:
@@ -206,14 +245,14 @@ def run(case_id: str | None = None) -> int:
             "reversed": second,
         }
         results.append(record)
-        print(f"{case['id']}: {winner}")
+        print(f"{case['id']}: {winner}", flush=True)
     output = ROOT / "benchmarks" / "results.json"
     output.write_text(
-        json.dumps({"model": MODEL, "provider": PROVIDER, "results": results}, indent=2),
+        json.dumps({**run_metadata(skill), "results": results}, indent=2),
         encoding="utf-8",
     )
     wins = sum(item["winner"] == "redpen" for item in results)
-    stable = sum(item["winner"] != "unstable" for item in results)
+    stable = sum(item["winner"] in {"redpen", "baseline", "tie"} for item in results)
     print(f"Redpen wins: {wins}/{len(results)}; stable mirrored verdicts: {stable}/{len(results)}")
     print(f"Wrote {output}")
     return 0 if wins > len(results) / 2 else 1

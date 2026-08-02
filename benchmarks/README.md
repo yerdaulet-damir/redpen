@@ -31,5 +31,11 @@ console.log, but it arrives on your phone" over generic alert-platform copy.
 If that pair does not survive the order swap, the benchmark refuses to treat
 the judge as trustworthy.
 
-`results.json` is generated output and should not be committed without the
-model name, run date, and raw mirrored verdicts intact.
+`results.json` is generated output. It records the model, provider, UTC run
+date, commit, skill, harness and case hashes, plus the raw mirrored verdicts.
+Keep that metadata intact when publishing or comparing a run.
+
+The verification run on 2026-08-02 with Claude Sonnet 4.6 produced six Redpen
+wins in six stable mirrored cases. Treat that as a directional regression
+baseline, not a permanent product score: model judges are noisy, which is why
+future disagreement remains visible instead of becoming a win.

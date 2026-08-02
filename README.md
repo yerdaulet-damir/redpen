@@ -100,7 +100,8 @@ Worked version of this brief: [same product, three readers](examples/diagnose-be
 
 ## How it works
 
-Once active, Redpen holds every line to the three questions and a short set of reflexes:
+Once active, Redpen runs the editorial loop, then finishes the winning line
+with a short set of reflexes:
 
 - **Point, don't talk.** Don't say "great investment" — point at the 50-year price chart.
 - **Facts over adjectives.** If in doubt, give a fact. A fact is precise, true, and you can build a story on it.
@@ -116,13 +117,19 @@ Full ruleset: [`skills/redpen/SKILL.md`](skills/redpen/SKILL.md). The diagnosis 
 ## FAQ
 
 **How do I stop my AI copy from sounding generic?**
-Generic AI copy is abstract, unfalsifiable, and interchangeable — the three things median training data rewards. Redpen forces every line to be concrete (you can picture it), falsifiable (provably true or false), and ownable (no competitor could sign it). Those three constraints are what separate memorable copy from filler.
+Generic AI copy usually starts before the model has found a real fact, reader
+moment, or argument. Redpen delays drafting, develops distinct territories,
+compares them, and then requires the winner to be concrete, falsifiable, and
+ownable. The gates remove filler; the editorial loop finds what is worth saying.
 
 **What are the three questions to test a headline?**
 Can I visualize it? Can I falsify it? Can nobody else say it? Run all three on every finished line; cut anything that fails one. Passing all three makes a line concrete, credible, and ownable. It does not guarantee the line meets a real reader in a real moment, which is why Redpen runs its truth, reader, and preference loop first.
 
 **Can Claude / Cursor write good marketing copy?**
-On its own it defaults to the statistical average, which is slop. With a rule that enforces concrete, falsifiable, ownable language, the same model writes copy that resonates. That rule is what Redpen installs.
+It can, but another request to "make it punchier" usually produces a smoother
+average. Redpen installs a repeatable editorial process: evidence first,
+reader moment second, distinct arguments third, comparison before polish, and
+finishing gates last.
 
 **What's the difference between concrete and abstract copy?**
 Abstract copy ("a better way," "empower creators") can't be dropped on your foot — you can't see it, so you won't remember it. Concrete copy ("1,000 songs in your pocket") is a thing you can picture. Concrete wins every time.
@@ -140,7 +147,11 @@ A well-made sentence can still be aimed at the wrong moment. Before rewriting th
 Can I visualize it? Can I falsify it? Can nobody else say it? Harry Dry — of Marketing Examples — asks these of every sentence he writes. Three no's and you're writing rubbish; three yes's and you're onto something. Redpen uses them as final gates after it has found the product truth and reader moment.
 
 **What is the Harry Dry copywriting method?**
-Make it visual (something you can picture), make it falsifiable (provably true or false, not an adjective), and make it so specific no competitor could sign it. Then point, don't talk — show a fact instead of describing a feeling. He breaks it down in full in his [76-minute copywriting talk](https://www.youtube.com/watch?v=TUMjnmfsPeM) on the *How I Write* podcast. Redpen turns that method into a rule your AI agent follows on every line.
+Make it visual (something you can picture), make it falsifiable (provably true
+or false, not an adjective), and make it so specific no competitor could sign
+it. Then point, don't talk — show a fact instead of describing a feeling. Harry
+Dry breaks this down in his [76-minute copywriting talk](https://www.youtube.com/watch?v=TUMjnmfsPeM)
+on the *How I Write* podcast. Redpen uses those questions as final quality gates.
 
 ## The methods behind Redpen
 
@@ -148,11 +159,12 @@ Redpen combines **Harry Dry's** finishing discipline, **Eugene Schwartz's** mark
 
 The three questions come straight from his framework, laid out in his **[76-minute copywriting breakdown](https://www.youtube.com/watch?v=TUMjnmfsPeM)** on David Perell's *How I Write* podcast. If a line can't be visualized, can't be falsified, and could be signed by a competitor, it gets cut. Harry teaches it with the ads everyone remembers — New Balance's "supermodels in London and dads in Ohio," The Economist, Volkswagen, Hinge's "designed to be deleted," Couch to 5K — plus Kaplan's Law of Words: *any word that isn't working for you is working against you.*
 
-Redpen does not replace him — it enforces his rules on every finished line. If you want the human version, [watch the talk](https://www.youtube.com/watch?v=TUMjnmfsPeM) and read [Marketing Examples](https://marketingexamples.com); it's the best copywriting on the internet.
+Redpen does not replace the original work. [Watch the talk](https://www.youtube.com/watch?v=TUMjnmfsPeM)
+and read [Marketing Examples](https://marketingexamples.com) for Harry's examples and reasoning.
 
 The reader-diagnosis stage draws on **Eugene Schwartz**, *Breakthrough Advertising* (1966) — in particular his argument that a headline lifted from elsewhere produces an ad that merely reminds people of something else, and that what's worth hunting is the element unique to this product and this market. That is a fair description of what a language model does by default. Redpen folds his diagnosis into the reader-moment step rather than treating it as a separate framework. Read the book; [`reference/schwartz.md`](skills/redpen/reference/schwartz.md) is a working compass, not a substitute.
 
-## Does the skill actually change output?
+## How we test whether the skill changes output
 
 The [`benchmarks/`](benchmarks/) folder compares a generic copywriter prompt
 against Redpen on six briefs. A separate judge sees anonymous candidates in
@@ -160,8 +172,14 @@ both orders and scores recognition, pull, trust, emotional movement,
 ownability, and cadence. Invented facts and fake emotion are hard failures.
 
 The order swap matters: if a judge picks the first answer both times, the case
-is unstable, not a Redpen win. The self-test first verifies the judge can prefer
-specific human copy over polished marketing wallpaper.
+is unstable, not a Redpen win. A selected candidate with a hard failure is
+disqualified before the mirrored verdict is counted. Every run records the
+model, UTC timestamp, commit, skill hash, and raw judgments so a result can be
+audited instead of repeated as a marketing claim.
+
+The 2026-08-02 Claude Sonnet 4.6 verification run produced **six Redpen wins in
+six stable mirrored cases**. That is a regression baseline, not a claim that
+one model grading itself has measured human conversion.
 
 ## License
 

@@ -41,7 +41,7 @@
     "brief": "Write a headline and paragraph for Redpen, an agent skill that improves marketing copy.",
     "truth": [
       "Redpen gathers source facts before drafting.",
-      "It creates distinct creative territories and compares them pairwise.",
+      "It creates three distinct creative territories and compares them pairwise.",
       "It rejects unsupported facts and competitor-copyable language.",
       "It works as instructions inside coding agents."
     ],

@@ -14,6 +14,16 @@ the hyperbole doesn't. Treat the stages as a rough map of a market's life, not
 as a measurement — the boundaries are judgement calls, and real markets sit
 between rungs more often than on them.
 
+## Contents
+
+- [The premise](#the-premise-everything-hangs-on)
+- [Awareness ladder](#ladder-a--the-five-stages-of-awareness)
+- [Sophistication ladder](#ladder-b--the-five-stages-of-sophistication)
+- [Verbalization moves](#verbalization--38-moves-grouped)
+- [Seven body-copy techniques](#the-seven-techniques-body-copy)
+- [Finishing layer](#the-finishing-layer)
+- [Three levels of creativity](#the-three-levels-of-creativity)
+
 ---
 
 ## The premise everything hangs on

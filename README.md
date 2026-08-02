@@ -2,9 +2,9 @@
 
 # ✍️ Redpen
 
-### AI copywriting that doesn't sound like AI.
+### Give your AI an editor, not another prompt template.
 
-**Redpen holds every line your agent writes to three questions before it ships — can you picture it, can you prove it, could nobody else say it.** Fail one and the line gets cut. So your headlines, landing pages, and taglines stop reading like filler and start reading like something a person would remember.
+**Redpen gathers product truth, enters the reader's real moment, develops three different creative territories, and compares them blind before it ships a line.** Harry Dry's three questions still finish the work. They are no longer asked to do the whole job.
 
 Works in Claude Code, Cursor, Cline, Windsurf, Copilot, and any agent that reads a rules file.
 
@@ -16,11 +16,11 @@ You know the copy. "A powerful, seamless, all-in-one platform that empowers crea
 
 That's slop. Not because it's wrong, but because it's forgettable.
 
-Redpen is the old ad man with the red pen, living inside your agent. You hand him a paragraph; he reads it, says nothing, crosses out five words, and leaves one line you can actually see.
+Redpen is the old ad man with the red pen, living inside your agent. You hand him a paragraph; he asks what happened in the reader's day, what is actually true about the product, and which phrase is carrying the line. Then he crosses out everything else.
 
-## The three questions (the whole engine)
+## The three questions are gates, not the engine
 
-Every sentence runs all three. A line that fails one gets cut *before* the draft is "done" — not after.
+Every finished sentence still runs all three. A line that fails one gets cut.
 
 | Question | Fails | Passes |
 |---|---|---|
@@ -28,20 +28,41 @@ Every sentence runs all three. A line that fails one gets cut *before* the draft
 | **2. Can I falsify it?** | "He has great values" — air | "He reads on the tube" — provably true or false, so you sit up |
 | **3. Can nobody else say it?** | "Don't just get a job" — any recruiter can sign it | "Your car has five numbers on the speedometer. Volvo has six." — only Volvo can say it |
 
-Three no's and you're writing rubbish. Three yes's and you're onto something.
+Three no's and you're writing rubbish. Three yes's means the line is eligible to
+ship. It does not mean the line has recognition, tension, trust, or feeling.
+
+## What Redpen does before those questions
+
+1. **Truth ledger** — separates observed facts, user-provided facts, inference,
+   and unknowns. No invented proof.
+2. **Reader moment** — finds one scene, one private sentence, one pressure, and
+   one concrete after-state. Not a persona deck.
+3. **Creative territories** — writes a lived scene, a sharp fact or contrast,
+   and a mechanism or identity argument. Not three synonym swaps.
+4. **Blind preference loop** — compares candidates as a rushed reader, a
+   skeptical buyer, and an experienced editor. It quotes the winning fragment,
+   names the losing defect, and revises only that defect.
+5. **Finishing gates** — visual, falsifiable, ownable, understood in two
+   seconds, natural aloud, and faithful to the evidence.
+
+Emotion is not added with words such as *delightful* or *empowering*. Redpen
+causes it with a scene, a consequence, a tradeoff, or a detail the reader
+recognizes from their own day.
 
 ## Before → after
 
-Same product. Left fails a test; right passes all three.
+Illustrative briefs. The right side uses supplied product truth and a specific
+reader moment rather than replacing adjectives with better adjectives.
 
 | Slop | Redpen |
 |---|---|
-| "A powerful, seamless AI platform that empowers creators." | **"1,000 songs in your pocket."** |
-| "The best all-in-one wellness supplement." | **"You're going to need a smaller cabinet."** |
-| "A dating app for meaningful long-term connections." | **"The dating app designed to be deleted."** |
-| "Learn copywriting and grow your business fast!" | **"You'll spend 22,000 hours writing. Spend 2 learning how."** |
+| "Seamless alerts that keep developers informed anywhere." | **"Like `console.log`, but it arrives on your phone."** |
+| "The easiest way to record and share your screen." | **"Record the bug before the meeting starts. No desktop app."** |
+| "AI code review tailored to your team." | **"It reads your last 200 merged PRs before it reviews the next one."** |
+| "Never worry about unpaid invoices again." | **"The invoice tab you reopen every Friday can follow up without you."** |
 
-Every line on the right you can picture, it's true or false, and no competitor can sign it. And it lands in two seconds flat.
+Each line on the right starts from something visible or verifiable. More
+importantly, each one meets a reader in a recognizable moment.
 
 ## Install
 
@@ -59,6 +80,24 @@ Redpen is one ruleset with adapters for every major agent. Pick yours.
 
 **Any other agent** — point it at [`AGENTS.md`](AGENTS.md).
 
+## Same product, three readers
+
+The reader moment is not a persona field. It changes which true thing goes first.
+
+One product, one supplied fact — *it reads the last 200 merged PRs in your repo before reviewing the next one* — and three readers standing in different places:
+
+| Where the reader is standing | What Redpen leads with |
+|---|---|
+| Has three AI review tools installed and ignores all of them | **"It reads your last 200 merged PRs before it reviews the next one."** The mechanism — the part a rival can't sign. |
+| Tired of a third round of nitpicks, doesn't know tools like this exist | **"The nitpicks are fixed before your reviewer opens the tab."** The outcome, said plainly. |
+| Doesn't consider review a problem worth solving | **"Every reviewer on your team enforces a slightly different rulebook."** No product, no claim — recognition, and a reason to read line two. |
+
+Same truth ledger. All three pass the finishing gates. Only one is right for a
+given reader — and the three questions cannot tell you which, because they test
+the sentence, not the situation.
+
+Worked version of this brief: [same product, three readers](examples/diagnose-before-you-write.md).
+
 ## How it works
 
 Once active, Redpen holds every line to the three questions and a short set of reflexes:
@@ -68,9 +107,11 @@ Once active, Redpen holds every line to the three questions and a short set of r
 - **Any word that isn't working for you is working against you.** Cross it out.
 - **Concrete over abstract.** "Songs in your pocket," not "songs in your media player."
 - **Conflict.** Hinge the line on an unspoken *but*. "Designed to be deleted."
-- **Shorter wins.** Cut to one line, then bold the rhythm.
+- **One desire per ad.** The word "and" in a headline is a leak.
+- **Shorter headline, longer proof.** Cut the headline to one line. But body copy is as long as the distance to belief — cutting copy that's still working is quitting the sale early.
+- **Never write from the file cabinet.** Swapping your product into someone else's proven headline gets you an echo. It's also the default failure mode of a model writing from the average of everything it read.
 
-Full ruleset: [`skills/redpen/SKILL.md`](skills/redpen/SKILL.md). Worked examples: [`examples/`](examples/).
+Full ruleset: [`skills/redpen/SKILL.md`](skills/redpen/SKILL.md). The diagnosis layer in full — awareness ladder, sophistication ladder, the seven body-copy techniques: [`skills/redpen/reference/schwartz.md`](skills/redpen/reference/schwartz.md). Worked examples: [`examples/`](examples/).
 
 ## FAQ
 
@@ -78,7 +119,7 @@ Full ruleset: [`skills/redpen/SKILL.md`](skills/redpen/SKILL.md). Worked example
 Generic AI copy is abstract, unfalsifiable, and interchangeable — the three things median training data rewards. Redpen forces every line to be concrete (you can picture it), falsifiable (provably true or false), and ownable (no competitor could sign it). Those three constraints are what separate memorable copy from filler.
 
 **What are the three questions to test a headline?**
-Can I visualize it? Can I falsify it? Can nobody else say it? Run all three on every line; cut anything that fails one.
+Can I visualize it? Can I falsify it? Can nobody else say it? Run all three on every finished line; cut anything that fails one. Passing all three makes a line concrete, credible, and ownable. It does not guarantee the line meets a real reader in a real moment, which is why Redpen runs its truth, reader, and preference loop first.
 
 **Can Claude / Cursor write good marketing copy?**
 On its own it defaults to the statistical average, which is slop. With a rule that enforces concrete, falsifiable, ownable language, the same model writes copy that resonates. That rule is what Redpen installs.
@@ -86,19 +127,41 @@ On its own it defaults to the statistical average, which is slop. With a rule th
 **What's the difference between concrete and abstract copy?**
 Abstract copy ("a better way," "empower creators") can't be dropped on your foot — you can't see it, so you won't remember it. Concrete copy ("1,000 songs in your pocket") is a thing you can picture. Concrete wins every time.
 
+**What are the 5 stages of customer awareness?**
+Most aware (knows the product, wants it), product aware (knows it, isn't sold), solution aware (wants the outcome, doesn't know you exist), problem aware (feels the problem, doesn't know it's fixable), and unaware (no problem in mind at all). Eugene Schwartz's ladder from *Breakthrough Advertising*. The general direction: the less the reader already knows, the less your opening line leans on the product and the more it has to be about them. Redpen uses it while modelling the reader's moment, before it drafts.
+
+**What are the 5 stages of market sophistication?**
+Roughly: you're first (state the claim plainly), rivals repeat it (intensify or enlarge the claim), the claims stop being believed (lead with the mechanism instead), the mechanism gets copied (extend the mechanism), and the market stops listening altogether (drop claims and write identification). Schwartz's point is that the ownable thing moves as a market ages — which is a more useful answer to "make this more unique" than adding adjectives.
+
+**Why does my headline sound good but not convert?**
+A well-made sentence can still be aimed at the wrong moment. Before rewriting the words, check what the reader already knows, what they have already been promised by others, and what they walked in distrusting. Reading a handful of competitor pages usually shows you which arguments the market has stopped hearing.
+
 **What are Harry Dry's three questions?**
-Can I visualize it? Can I falsify it? Can nobody else say it? Harry Dry — of Marketing Examples — asks these of every sentence he writes. Three no's and you're writing rubbish; three yes's and you're onto something. Redpen runs all three on every line automatically.
+Can I visualize it? Can I falsify it? Can nobody else say it? Harry Dry — of Marketing Examples — asks these of every sentence he writes. Three no's and you're writing rubbish; three yes's and you're onto something. Redpen uses them as final gates after it has found the product truth and reader moment.
 
 **What is the Harry Dry copywriting method?**
 Make it visual (something you can picture), make it falsifiable (provably true or false, not an adjective), and make it so specific no competitor could sign it. Then point, don't talk — show a fact instead of describing a feeling. He breaks it down in full in his [76-minute copywriting talk](https://www.youtube.com/watch?v=TUMjnmfsPeM) on the *How I Write* podcast. Redpen turns that method into a rule your AI agent follows on every line.
 
-## The method behind Redpen
+## The methods behind Redpen
 
-Redpen is the copywriting method of **Harry Dry** — creator of [Marketing Examples](https://marketingexamples.com), who has taught 100,000+ people to write copy that rips — turned into a rule your agent can't ignore.
+Redpen combines **Harry Dry's** finishing discipline, **Eugene Schwartz's** market diagnosis, and a blind editorial preference loop designed for AI agents. The loop is the missing part: it compares distinct arguments, keeps the load-bearing human phrase, and revises from a named loss instead of asking the model to "make it better" again.
 
 The three questions come straight from his framework, laid out in his **[76-minute copywriting breakdown](https://www.youtube.com/watch?v=TUMjnmfsPeM)** on David Perell's *How I Write* podcast. If a line can't be visualized, can't be falsified, and could be signed by a competitor, it gets cut. Harry teaches it with the ads everyone remembers — New Balance's "supermodels in London and dads in Ohio," The Economist, Volkswagen, Hinge's "designed to be deleted," Couch to 5K — plus Kaplan's Law of Words: *any word that isn't working for you is working against you.*
 
-Redpen doesn't replace him — it enforces his rules on every line, so you get the discipline without having to hold it in your head. If you want the human version, [watch the talk](https://www.youtube.com/watch?v=TUMjnmfsPeM) and read [Marketing Examples](https://marketingexamples.com); it's the best copywriting on the internet.
+Redpen does not replace him — it enforces his rules on every finished line. If you want the human version, [watch the talk](https://www.youtube.com/watch?v=TUMjnmfsPeM) and read [Marketing Examples](https://marketingexamples.com); it's the best copywriting on the internet.
+
+The reader-diagnosis stage draws on **Eugene Schwartz**, *Breakthrough Advertising* (1966) — in particular his argument that a headline lifted from elsewhere produces an ad that merely reminds people of something else, and that what's worth hunting is the element unique to this product and this market. That is a fair description of what a language model does by default. Redpen folds his diagnosis into the reader-moment step rather than treating it as a separate framework. Read the book; [`reference/schwartz.md`](skills/redpen/reference/schwartz.md) is a working compass, not a substitute.
+
+## Does the skill actually change output?
+
+The [`benchmarks/`](benchmarks/) folder compares a generic copywriter prompt
+against Redpen on six briefs. A separate judge sees anonymous candidates in
+both orders and scores recognition, pull, trust, emotional movement,
+ownability, and cadence. Invented facts and fake emotion are hard failures.
+
+The order swap matters: if a judge picks the first answer both times, the case
+is unstable, not a Redpen win. The self-test first verifies the judge can prefer
+specific human copy over polished marketing wallpaper.
 
 ## License
 

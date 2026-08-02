@@ -1,4 +1,6 @@
 .DS_Store
+benchmarks/results.json
 node_modules/
 *.log
 .env
+__pycache__/

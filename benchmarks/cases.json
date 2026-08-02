@@ -1,0 +1,75 @@
+[
+  {
+    "id": "phone-alerts",
+    "surface": "landing-page hero",
+    "brief": "Write a headline and one-line subhead for a developer tool that sends a Telegram message when code reaches a marked line.",
+    "truth": [
+      "The developer adds one function call to code.",
+      "The message arrives in Telegram on the developer's phone.",
+      "The product does not provide full error monitoring or tracing."
+    ],
+    "reader": "A solo developer waiting for a background job to finish while away from the laptop.",
+    "desired_action": "Open the install instructions."
+  },
+  {
+    "id": "screen-recorder",
+    "surface": "product tagline",
+    "brief": "Write a tagline for a browser screen recorder that records screen and webcam without a desktop installation.",
+    "truth": [
+      "Recording starts in the browser.",
+      "It can capture the screen and webcam together.",
+      "No desktop app is required."
+    ],
+    "reader": "A founder who needs to explain a bug to a contractor before the next meeting.",
+    "desired_action": "Start a recording."
+  },
+  {
+    "id": "invoice-chasing",
+    "surface": "email subject and opener",
+    "brief": "Write a subject and opener for software that reminds freelancers about overdue invoices.",
+    "truth": [
+      "The software detects overdue invoices.",
+      "It can send reminders on a schedule chosen by the freelancer.",
+      "The freelancer approves the reminder template before it is used."
+    ],
+    "reader": "A freelance designer reopening the same unpaid invoice on Friday afternoon.",
+    "desired_action": "Connect an invoicing account."
+  },
+  {
+    "id": "copy-skill",
+    "surface": "GitHub README hero",
+    "brief": "Write a headline and paragraph for Redpen, an agent skill that improves marketing copy.",
+    "truth": [
+      "Redpen gathers source facts before drafting.",
+      "It creates distinct creative territories and compares them pairwise.",
+      "It rejects unsupported facts and competitor-copyable language.",
+      "It works as instructions inside coding agents."
+    ],
+    "reader": "A builder who has already tried asking an AI to make copy less generic and received more adjectives.",
+    "desired_action": "Install the skill."
+  },
+  {
+    "id": "pr-review",
+    "surface": "landing-page hero",
+    "brief": "Write a headline and subhead for a pull-request review agent.",
+    "truth": [
+      "It reads the repository's last 200 merged pull requests.",
+      "It uses recurring reviewer comments as project-specific review guidance.",
+      "It comments on new pull requests before a human reviewer opens them."
+    ],
+    "reader": "An engineer opening a pull request after two previous rounds of avoidable style comments.",
+    "desired_action": "Connect a GitHub repository."
+  },
+  {
+    "id": "meeting-notes",
+    "surface": "app-store description opening",
+    "brief": "Write the first two lines for an app that turns recorded meetings into assigned follow-up tasks.",
+    "truth": [
+      "The app transcribes a recorded meeting.",
+      "It extracts explicit commitments and names the person who made each one.",
+      "A user reviews tasks before they are sent."
+    ],
+    "reader": "A project lead checking yesterday's notes because nobody remembers who agreed to contact the client.",
+    "desired_action": "Upload a recording."
+  }
+]

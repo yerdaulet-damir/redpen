@@ -1,4 +1,4 @@
-# How to write an app store description that sells
+# How to write an app store description from a visible product fact
 
 Most app descriptions are a feature list wearing a marketing hat: "Beautifully designed, powerful, and packed with features to boost your productivity." Nobody downloads a feeling. They download a concrete outcome.
 

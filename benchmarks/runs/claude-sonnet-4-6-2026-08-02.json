@@ -1,0 +1,420 @@
+{
+  "generated_at": "2026-08-02T09:12:49.337087+00:00",
+  "commit": "054ef5c0a890094abaa2c945ac8b4a48a891548c",
+  "skill_sha256": "6ada3fd046d27ed887e1a11543e25a8e8ca415b0499b3ffb39e964546de30d66",
+  "harness_sha256": "651b826715d3c6ba129b2ff58a290a80280c9157bbbd8d1e32829d354c44ec39",
+  "cases_sha256": "3d4129276f100b8915b5b337ce4ec763ecb73ffb39588bf4571f855f829ad912",
+  "model": "claude-sonnet-4-6",
+  "provider": "claude-cli",
+  "results": [
+    {
+      "id": "phone-alerts",
+      "winner": "redpen",
+      "baseline": "# Know the Instant Your Code Gets There\n\nAdd one function call. Get a Telegram ping on your phone the moment execution hits that line \u2014 so you can stop refreshing and start living your life.\n\n**See how to install it \u2192**",
+      "redpen": "**Step away. Your phone pings when the code gets there.**\n\nAdd one function call to any script \u2014 Telegram notifies you the moment execution reaches it.\n\n---\n\n- **Reader moment**: Job is running, laptop is closed, developer is somewhere else half-checking their phone every few minutes for no reason.\n- **Truth used**: \"step away\" is only honest because the product actually delivers to their pocket; \"when the code gets there\" mirrors the marked-line mechanism without jargon.\n- **Why this won**: Two short sentences do opposite work \u2014 the first grants permission to leave; the second resolves the anxiety of leaving. \"Gets there\" carries the spatial logic of a marked line without requiring the reader to already understand the product.\n- **Runner-up** (different territory, genuinely): *\"You don't need an observability stack. Just a Telegram ping when your script hits the line.\"* \u2014 strong objection-killer for readers burned by heavy tooling, but it opens with what this isn't rather than what it gives. Better as a secondary callout below the fold than a hero.",
+      "forward": {
+        "winner": "B",
+        "a": {
+          "scores": {
+            "recognition": 2,
+            "pull": 2,
+            "trust": 2,
+            "emotional_movement": 1,
+            "ownability": 1,
+            "cadence": 2
+          },
+          "hard_failures": [],
+          "fragment": "stop refreshing and start living your life",
+          "defect": "Names the desired emotion rather than causing it; any productivity tool could sign this line."
+        },
+        "b": {
+          "scores": {
+            "recognition": 3,
+            "pull": 3,
+            "trust": 3,
+            "emotional_movement": 3,
+            "ownability": 3,
+            "cadence": 3
+          },
+          "hard_failures": [],
+          "fragment": "Step away. Your phone pings when the code gets there.",
+          "defect": "None."
+        },
+        "reason": "B's headline does two units of concrete work in six words \u2014 grants permission to leave, then resolves the anxiety of leaving \u2014 while A's closer 'start living your life' is generic wallpaper any competitor can sign."
+      },
+      "reversed": {
+        "winner": "A",
+        "a": {
+          "scores": {
+            "recognition": 3,
+            "pull": 3,
+            "trust": 2,
+            "emotional_movement": 3,
+            "ownability": 3,
+            "cadence": 3
+          },
+          "hard_failures": [],
+          "fragment": "Step away. Your phone pings when the code gets there.",
+          "defect": "\"any script\" is slightly loose but not a fabricated fact; minor only."
+        },
+        "b": {
+          "scores": {
+            "recognition": 2,
+            "pull": 2,
+            "trust": 2,
+            "emotional_movement": 1,
+            "ownability": 1,
+            "cadence": 2
+          },
+          "hard_failures": [
+            "generic copy a competitor can sign: 'stop refreshing and start living your life' fits any background-task or productivity tool"
+          ],
+          "fragment": "so you can stop refreshing and start living your life",
+          "defect": "Subhead earns its specificity then throws it away on a generic aspiration tag that names a desired state instead of producing one."
+        },
+        "reason": "A's two-sentence structure does split work \u2014 the headline grants permission to leave, the subhead resolves the anxiety of leaving \u2014 while B collapses into wallpaper the moment it reaches 'living your life.'"
+      }
+    },
+    {
+      "id": "screen-recorder",
+      "winner": "redpen",
+      "baseline": "**Show the bug. Skip the install. Record in seconds \u2014 right from your browser.**",
+      "redpen": "**Show the bug. No download, no delay.**\n\n---\n\n**Reader moment:** Twenty minutes before the call. They found the bug. They're typing a Slack message trying to describe something visual \u2014 a layout collapse, a broken flow \u2014 and the words aren't working.\n\n**Truth used:** The absence of installation isn't a feature footnote; for someone mid-sprint before a meeting, it's the entire value. \"No delay\" is what \"browser-based\" actually means to them.\n\n**Why this won:** \"Show the bug\" names the job in three words and catches the founder mid-frustration \u2014 they're not trying to *record*, they're trying to *show*. The second sentence removes the only objection in the moment: having to stop and install something. The parallel negatives give it rhythm without manufacturing it.\n\n**Runner-up:** *\"Record now. Install never.\"* \u2014 cleaner contrast, but inverts the priority. The founder's first thought is the bug, not the tool.",
+      "forward": {
+        "winner": "B",
+        "a": {
+          "scores": {
+            "recognition": 2,
+            "pull": 2,
+            "trust": 2,
+            "emotional_movement": 2,
+            "ownability": 1,
+            "cadence": 1
+          },
+          "hard_failures": [],
+          "fragment": "Record in seconds \u2014 right from your browser.",
+          "defect": "The third clause explains rather than lands; 'right from your browser' is a feature footnote that breaks the rhythm built by the first two punchy sentences and ends on the weakest beat."
+        },
+        "b": {
+          "scores": {
+            "recognition": 3,
+            "pull": 2,
+            "trust": 2,
+            "emotional_movement": 2,
+            "ownability": 2,
+            "cadence": 3
+          },
+          "hard_failures": [],
+          "fragment": "Show the bug. No download, no delay.",
+          "defect": "Webcam capture and browser-specificity go unmentioned, leaving a small surface of undifferentiated value \u2014 acceptable for a tagline but a missed chance."
+        },
+        "reason": "B earns its punch by stopping at two beats; A earns the same opening line then wastes it with an explanatory third clause that slides into generic browser-tool copy any competitor could sign."
+      },
+      "reversed": {
+        "winner": "A",
+        "a": {
+          "scores": {
+            "recognition": 3,
+            "pull": 3,
+            "trust": 2,
+            "emotional_movement": 3,
+            "ownability": 3,
+            "cadence": 3
+          },
+          "hard_failures": [],
+          "fragment": "Show the bug. No download, no delay.",
+          "defect": "None."
+        },
+        "b": {
+          "scores": {
+            "recognition": 2,
+            "pull": 1,
+            "trust": 1,
+            "emotional_movement": 1,
+            "ownability": 1,
+            "cadence": 1
+          },
+          "hard_failures": [
+            "generic copy a competitor can sign \u2014 'Skip the install. Record in seconds \u2014 right from your browser.' belongs to no one and fits every browser tool on the market"
+          ],
+          "fragment": "Skip the install. Record in seconds \u2014 right from your browser.",
+          "defect": "Opens with A's strong line, then collapses into a feature checklist; the em-dash pivot kills momentum and the tail is interchangeable with Loom, Vidyard, or any SaaS screen tool."
+        },
+        "reason": "A lands in six words and stops; B borrows A's only strong move then dilutes it with three generic clauses any competitor could sign."
+      }
+    },
+    {
+      "id": "invoice-chasing",
+      "winner": "redpen",
+      "baseline": "**Subject:** That invoice you keep reopening? Let's finally get it paid.\n\n---\n\nHey,\n\nYou know the one. You've opened it three times this week, thought about sending a follow-up, and then closed the tab and moved on with your day.\n\nIt's Friday. You shouldn't be chasing money \u2014 you should be wrapping up for the weekend.\n\n**InvoiceNudge** detects overdue invoices and sends polite, scheduled reminders on your behalf. You write the tone, approve the template, and set the timing. We handle the awkward part.\n\n**Connect your invoicing account in 60 seconds \u2192**",
+      "redpen": "**Subject:** That invoice isn't going to chase itself\n\n**Opener:**\nYou finished the project. The invoice went out. Now it's Friday, and you're still staring at the same unpaid number \u2014 that follow-up email still half-written in your head.\n\n[Software name] connects to your invoicing account, spots what's overdue, and sends the reminder on the schedule you set \u2014 with a message you approved before it goes anywhere.\n\n---\n\n**Reader moment:** Friday, the tab already open, stuck in the loop of wanting to follow up and not wanting to seem difficult.\n\n**Truth used:** The freelancer approves the template before anything sends. That single fact resolves the real hesitation \u2014 it's not \"will this make me look desperate?\" It's \"I have control.\"\n\n**Why this won:** \"That invoice\" is doing two jobs: it names the specific artifact in front of them *and* carries the exasperation they already feel. The opener doesn't describe their frustration \u2014 it traces the exact stall (project done \u2192 invoice out \u2192 still unpaid \u2192 follow-up written only in their head). \"Before it goes anywhere\" closes the trust gap without announcing it.\n\n**Runner-up:** *The work is done. The awkward part isn't.* \u2014 lands the contrast cleanly, but \"awkward\" names the emotion instead of causing it, and a competitor could sign it unchanged.",
+      "forward": {
+        "winner": "B",
+        "a": {
+          "scores": {
+            "recognition": 3,
+            "pull": 3,
+            "trust": 1,
+            "emotional_movement": 2,
+            "ownability": 2,
+            "cadence": 3
+          },
+          "hard_failures": [
+            "invented fact: 'opened it three times this week' \u2014 no frequency data exists in the brief",
+            "invented claim: 'Connect your invoicing account in 60 seconds' \u2014 setup time not a known truth"
+          ],
+          "fragment": "'opened it three times this week, thought about sending a follow-up, and then closed the tab'",
+          "defect": "The vivid specificity that makes the opener feel real is fabricated \u2014 both the three-times detail and the 60-second promise are invented facts that poison the trust the copy is trying to build."
+        },
+        "b": {
+          "scores": {
+            "recognition": 2,
+            "pull": 2,
+            "trust": 3,
+            "emotional_movement": 3,
+            "ownability": 2,
+            "cadence": 2
+          },
+          "hard_failures": [],
+          "fragment": "'that follow-up email still half-written in your head'",
+          "defect": "'[Software name]' placeholder and a subject line built on a clich\u00e9 ('isn't going to chase itself') cost it distinctiveness a competitor can't easily steal."
+        },
+        "reason": "B causes the exact stall it describes \u2014 'half-written in your head' lands where A's invented 'three times this week' cheats, and invented facts are a disqualifying trust failure regardless of how well the copy reads."
+      },
+      "reversed": {
+        "winner": "A",
+        "a": {
+          "scores": {
+            "recognition": 3,
+            "pull": 3,
+            "trust": 3,
+            "emotional_movement": 3,
+            "ownability": 2,
+            "cadence": 3
+          },
+          "hard_failures": [],
+          "fragment": "that follow-up email still half-written in your head",
+          "defect": "Ownability is the only soft ceiling \u2014 the subject line structure ('X isn't going to Y itself') is replicable, but the opener's specificity anchors it enough to hold."
+        },
+        "b": {
+          "scores": {
+            "recognition": 3,
+            "pull": 2,
+            "trust": 1,
+            "emotional_movement": 2,
+            "ownability": 2,
+            "cadence": 2
+          },
+          "hard_failures": [
+            "Invented/upgraded fact: 'Connect your invoicing account in 60 seconds' \u2014 no speed claim exists in the brief",
+            "Invented specific: 'opened it three times this week' \u2014 brief supports one reopening, not a quantified count",
+            "Emotion named, not caused: 'We handle the awkward part'"
+          ],
+          "fragment": "Connect your invoicing account in 60 seconds \u2192",
+          "defect": "Two invented specifics (60 seconds, three times this week) and a named emotion erode the trust the template-approval fact was building."
+        },
+        "reason": "A traces the exact stall loop without fabricating details or naming emotions; B's '60 seconds' claim and 'three times this week' invent facts the brief never supplied, disqualifying its strongest recognition moment."
+      }
+    },
+    {
+      "id": "copy-skill",
+      "winner": "redpen",
+      "baseline": "# Redpen: Marketing copy that earns its adjectives.\n\nYou've already tried \"make this less generic\" and got *powerful*, *seamless*, and *cutting-edge* in return. Redpen works differently. Before writing a word, it pulls source facts from your product context\u2014then generates three distinct creative territories and compares them head-to-head, eliminating any claim a competitor could copy or any line that isn't backed by something real. The result isn't wordsmithed fluff; it's copy with a defensible reason to exist. Drop it into your coding agent as a skill and let it run wherever you're already building.\n\n**[Install the skill \u2192](#)**",
+      "redpen": "## Copy\n\n---\n\n**You asked the AI to make it less generic. It added more adjectives.**\n\nRedpen works differently. Before it writes a word, it pulls the product's real verbs, numbers, and constraints into a fact ledger. Then it builds three distinct creative arguments and runs them pairwise\u2014keeping the version that earns recognition, not just describes it. It rejects unsupported claims and any line a competitor could sign unchanged. Drop it into your coding agent as a skill file.\n\n---\n\n**Reader moment**\nBuilder stares at \"Supercharge your workflow with powerful AI-driven insights\" and realizes their third pass made it worse. They want a tool, not more prompting tips.\n\n**Truth used**\nThe fact-ledger-before-drafting mechanism is the structural answer to adjective inflation. Three territories plus pairwise comparison is the procedural proof it doesn't just rephrase.\n\n**Why this won**\nThe headline quotes their exact failure, which creates enough pull that the body only needs to answer one question: *so what does it do instead?* \"Earns recognition, not just describes it\" names the defect in all the copy they've already received without using the word \"generic\" a second time.\n\n**Runner-up**\n`Most AI copy tools start with adjectives. Redpen starts with facts.` \u2014 clean contrast, falsifiable, but it asks the reader to trust the claim before they've felt the problem. The winning headline causes the problem first, so the mechanism lands as relief rather than marketing.",
+      "forward": {
+        "winner": "B",
+        "a": {
+          "scores": {
+            "recognition": 2,
+            "pull": 2,
+            "trust": 2,
+            "emotional_movement": 2,
+            "ownability": 2,
+            "cadence": 2
+          },
+          "hard_failures": [],
+          "fragment": "earns its adjectives",
+          "defect": "Headline is clever but asks readers to decode a wordplay before they've felt the problem; 'product context' is vaguer than the brief warrants and 'defensible reason to exist' names the benefit abstractly instead of causing it."
+        },
+        "b": {
+          "scores": {
+            "recognition": 3,
+            "pull": 3,
+            "trust": 3,
+            "emotional_movement": 3,
+            "ownability": 3,
+            "cadence": 3
+          },
+          "hard_failures": [],
+          "fragment": "You asked the AI to make it less generic. It added more adjectives.",
+          "defect": "None material; 'fact ledger' is an interpretive label for the sourcing step but does not exceed the known facts."
+        },
+        "reason": "B's headline quotes the reader's exact failure in their own syntax, so the mechanism ('fact ledger,' 'pairwise,' 'earns recognition, not just describes it') lands as relief rather than a claim to evaluate\u2014A's headline requires the reader to appreciate a pun before they've felt anything."
+      },
+      "reversed": {
+        "winner": "A",
+        "a": {
+          "scores": {
+            "recognition": 3,
+            "pull": 3,
+            "trust": 3,
+            "emotional_movement": 3,
+            "ownability": 3,
+            "cadence": 3
+          },
+          "hard_failures": [],
+          "fragment": "You asked the AI to make it less generic. It added more adjectives.",
+          "defect": "\"fact ledger\" is a label A coined for the stated mechanism, not a supported product term\u2014minor but worth flagging."
+        },
+        "b": {
+          "scores": {
+            "recognition": 2,
+            "pull": 2,
+            "trust": 2,
+            "emotional_movement": 2,
+            "ownability": 2,
+            "cadence": 2
+          },
+          "hard_failures": [],
+          "fragment": "copy with a defensible reason to exist",
+          "defect": "\"wordsmithed fluff\" uses the exact register it is criticizing, undermining the trust the body tries to build; headline \"earns its adjectives\" is clever wordplay rather than a gut-punch for a reader who just got three more adjectives."
+        },
+        "reason": "A's opening sentence is the reader's exact inner monologue, so every subsequent mechanism detail lands as relief rather than a claim to be evaluated; B's headline deflects that recognition into a pun."
+      }
+    },
+    {
+      "id": "pr-review",
+      "winner": "redpen",
+      "baseline": "# Stop Hearing the Same Comments Twice\n\nYour reviewers keep saying the same things. Our agent reads your last 200 merged pull requests, learns what your team actually cares about, and leaves those comments on your PR \u2014 before a human ever opens it.\n\n**Connect your GitHub repository and ship cleaner code, faster.**",
+      "redpen": "**Your reviewer's next comment is already in your last 200 merged PRs.**\n\n[Name] reads your merged pull request history, learns what your team always catches, and comments on every new PR before a human reviewer opens it.\n\n**Connect your GitHub repository \u2192**\n\n---\n\n**Reader moment**\n4:47 PM. PR is open. They're slightly braced\u2014they already know what's coming, because it came last time, and the time before that. The frustration isn't the comment itself. It's that the rule lives in one person's head and nowhere else.\n\n**Truth used**\n\"Last 200 merged PRs\" is the mechanism that earns the headline. It reframes the existing git history as the source of authority\u2014not generic lint, not the tool's opinion, but the team's own settled behavior. \"Already in your last 200 merged PRs\" makes the reader see that the problem was always solvable; it just wasn't solved.\n\n**Why this won**\nThe load-bearing fragment is \"already in your last 200 merged PRs.\" It causes recognition before it explains anything. The headline lands the irony (the pattern was findable the whole time) and the subhead delivers the mechanism in the same breath as the relief: *before a human reviewer opens it*. That phrase is where the engineer exhales.\n\n**Runner-up**\n*Stop hearing the same review comment twice.* \u2014 Recognizable, but a competitor can sign it unchanged. No mechanism, no proof, no specific reader situation. Faster to read; less reason to believe.",
+      "forward": {
+        "winner": "B",
+        "a": {
+          "scores": {
+            "recognition": 2,
+            "pull": 2,
+            "trust": 2,
+            "emotional_movement": 2,
+            "ownability": 1,
+            "cadence": 2
+          },
+          "hard_failures": [],
+          "fragment": "Stop Hearing the Same Comments Twice",
+          "defect": "Headline is generic enough for any linter, style guide, or review tool to claim unchanged \u2014 no mechanism, no specific reader situation, no proof."
+        },
+        "b": {
+          "scores": {
+            "recognition": 3,
+            "pull": 3,
+            "trust": 2,
+            "emotional_movement": 3,
+            "ownability": 2,
+            "cadence": 2
+          },
+          "hard_failures": [],
+          "fragment": "Your reviewer's next comment is already in your last 200 merged PRs.",
+          "defect": "[Name] is an unfilled placeholder \u2014 weakens trust on a live surface and must be resolved before launch."
+        },
+        "reason": "B's headline puts the mechanism inside the recognition moment \u2014 'already in your last 200 merged PRs' makes the reader feel the irony before the subhead explains anything, which A's imperative opener never achieves."
+      },
+      "reversed": {
+        "winner": "A",
+        "a": {
+          "scores": {
+            "recognition": 3,
+            "pull": 3,
+            "trust": 3,
+            "emotional_movement": 3,
+            "ownability": 3,
+            "cadence": 2
+          },
+          "hard_failures": [],
+          "fragment": "Your reviewer's next comment is already in your last 200 merged PRs.",
+          "defect": "[Name] is an unfilled placeholder in live copy; cadence stumbles there."
+        },
+        "b": {
+          "scores": {
+            "recognition": 2,
+            "pull": 2,
+            "trust": 2,
+            "emotional_movement": 1,
+            "ownability": 1,
+            "cadence": 2
+          },
+          "hard_failures": [
+            "generic copy that a competitor can sign: 'Stop Hearing the Same Comments Twice' requires zero product knowledge and fits any review tool"
+          ],
+          "fragment": "ship cleaner code, faster",
+          "defect": "Headline carries no mechanism and is freely signable by a competitor; CTA appends generic marketing wallpaper that undercuts the concrete subhead."
+        },
+        "reason": "A's headline embeds the exact product mechanism as the irony\u2014'already in your last 200 merged PRs' causes recognition and mild shame before explaining anything\u2014while B's headline could run on a linter, a style guide, or a rubber duck."
+      }
+    },
+    {
+      "id": "meeting-notes",
+      "winner": "redpen",
+      "baseline": "**Nobody forgot. It's right here.**\n\nUpload your recording and get every commitment matched to the person who made it \u2014 ready to send the moment you approve.",
+      "redpen": "**Someone in yesterday's meeting said they'd contact the client. Upload the recording \u2014 [App] names every commitment and the person who made it.**\n\n---\n\n**Reader moment:** Morning after, notes open, no one's replied to Slack, the lead is doing forensic archaeology on their own memory.\n\n**Truth used:** The app doesn't just transcribe \u2014 it surfaces *who* said *what*, which is the only thing the lead actually needs. That specificity is the mechanism, and the mechanism is the headline.\n\n**Why this won:** \"Someone said they'd contact the client\" is the reader's exact inner sentence, already formed before they open the store listing. It creates recognition before the product is mentioned. The second line delivers the mechanism as direct relief \u2014 not a feature description, a resolution. \"Upload the recording\" lands as obvious next step, not a command.\n\n**Runner-up:** *\"Yesterday's meeting made commitments no one wrote down. Upload the recording and see exactly who said they'd do what.\"* \u2014 Different territory (universal pattern vs. specific scene). Loses because \"made commitments no one wrote down\" is slightly passive and the close goes vague where A goes precise.",
+      "forward": {
+        "winner": "B",
+        "a": {
+          "scores": {
+            "recognition": 1,
+            "pull": 2,
+            "trust": 2,
+            "emotional_movement": 2,
+            "ownability": 2,
+            "cadence": 3
+          },
+          "hard_failures": [],
+          "fragment": "Nobody forgot. It's right here.",
+          "defect": "The opener misfires: the reader's problem IS that nobody remembers, so 'nobody forgot' creates a half-second of confusion before resolving. Clever inversion that undercuts immediate recognition."
+        },
+        "b": {
+          "scores": {
+            "recognition": 3,
+            "pull": 3,
+            "trust": 2,
+            "emotional_movement": 3,
+            "ownability": 3,
+            "cadence": 3
+          },
+          "hard_failures": [],
+          "fragment": "Someone in yesterday's meeting said they'd contact the client.",
+          "defect": "[App] placeholder is awkward but clearly a stand-in, not a factual or copy failure."
+        },
+        "reason": "B's opening sentence is the reader's literal inner monologue \u2014 it lands before the product is named, making the upload CTA feel like relief rather than instruction; A's 'Nobody forgot' momentarily contradicts the reader's lived problem and loses the recognition window."
+      },
+      "reversed": {
+        "winner": "A",
+        "a": {
+          "scores": {
+            "recognition": 3,
+            "pull": 3,
+            "trust": 3,
+            "emotional_movement": 3,
+            "ownability": 2,
+            "cadence": 3
+          },
+          "hard_failures": [],
+          "fragment": "Someone in yesterday's meeting said they'd contact the client.",
+          "defect": "Minor: '[App]' placeholder left in; ownability dips slightly because the client-contact scenario, while vivid, could be lifted by a competitor."
+        },
+        "b": {
+          "scores": {
+            "recognition": 1,
+            "pull": 2,
+            "trust": 2,
+            "emotional_movement": 1,
+            "ownability": 2,
+            "cadence": 2
+          },
+          "hard_failures": [],
+          "fragment": "Nobody forgot. It's right here.",
+          "defect": "'Nobody forgot' contradicts the reader's exact pain \u2014 they are the person who cannot remember who committed to what; the line names reassurance instead of causing it, and the reader will feel mis-seen before the second sentence can recover."
+        },
+        "reason": "A opens with the reader's own interior monologue and delivers the mechanism as direct relief; B's hook misidentifies the problem, losing recognition and emotional movement before the accurate second sentence arrives."
+      }
+    }
+  ]
+}

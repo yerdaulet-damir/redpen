@@ -1,8 +1,8 @@
 # Redpen examples
 
-Worked before → after teardowns. Each one shows the truth ledger, reader moment,
-creative choice, and finishing checks behind a stronger line. The three Harry
-Dry questions still finish the work; they no longer pretend to do the whole job.
+Worked before → after teardowns. The first two show the full truth-ledger,
+reader-moment, territory, and preference loop. The remaining examples isolate
+one finishing move; they are shorter demonstrations, not complete Redpen runs.
 
 - [From correct copy to felt copy](emotional-rewrite.md) — why three yeses are not enough
 - [Same product, three readers](diagnose-before-you-write.md) — why the sentence was never the variable
